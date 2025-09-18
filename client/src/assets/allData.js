@@ -140,6 +140,223 @@ export const destinations = [
     price: 790,
     image: zhangye,
     tags: ["Solo travel", "City"]
+  },
+  {
+    title: "Roraima Tepui",
+    location: "Canaima Park, Venezuela",
+    price: 790,
+    image: roraima,
+    tags: ["Solo travel", "Budget"]
+  },
+  {
+    title: "Socotra Island",
+    location: "Yemen",
+    price: 870,
+    image: socotra,
+    tags: ["Luxury", "Beach"]
+  },
+  {
+    title: "San Lake Baikal",
+    location: "Siberia, Russia",
+    price: 604,
+    image: san,
+    tags: ["Sports", "Adventurous"]
+  }, {
+    title: "Thornridge Cir. Shiloh",
+    location: "St George’s Ln, Singapore",
+    price: 300,
+    image: thornridge,
+    tags: ["Mountains", "City"]
+  },
+  {
+    title: "Roraima Tepui",
+    location: "Canaima Park, Venezuela",
+    price: 790,
+    image: roraima,
+    tags: ["Solo travel", "Budget"]
+  },
+  {
+    title: "Socotra Island",
+    location: "Yemen",
+    price: 870,
+    image: socotra,
+    tags: ["Luxury", "Beach"]
+  },
+  {
+    title: "San Lake Baikal",
+    location: "Siberia, Russia",
+    price: 604,
+    image: san,
+    tags: ["Sports", "Adventurous"]
+  },{
+    title: "Taman Negara",
+    location: "Peninsular Malaysia",
+    price: 300,
+    image: taman,
+    tags: ["Mountains", "Budget"]
+  },
+  {
+    title: "Zhangye Landform",
+    location: "Gansu, China",
+    price: 790,
+    image: zhangye,
+    tags: ["Solo travel", "City"]
+  },
+  {
+    title: "Roraima Tepui",
+    location: "Canaima Park, Venezuela",
+    price: 790,
+    image: roraima,
+    tags: ["Solo travel", "Budget"]
+  },
+  {
+    title: "Socotra Island",
+    location: "Yemen",
+    price: 870,
+    image: socotra,
+    tags: ["Luxury", "Beach"]
+  },{
+    title: "Taman Negara",
+    location: "Peninsular Malaysia",
+    price: 300,
+    image: taman,
+    tags: ["Mountains", "Budget"]
+  },{
+    title: "Thornridge Cir. Shiloh",
+    location: "St George’s Ln, Singapore",
+    price: 300,
+    image: thornridge,
+    tags: ["Mountains", "City"]
+  },
+  {
+    title: "Roraima Tepui",
+    location: "Canaima Park, Venezuela",
+    price: 790,
+    image: roraima,
+    tags: ["Solo travel", "Budget"]
+  },
+  {
+    title: "Socotra Island",
+    location: "Yemen",
+    price: 870,
+    image: socotra,
+    tags: ["Luxury", "Beach"]
+  },
+  {
+    title: "San Lake Baikal",
+    location: "Siberia, Russia",
+    price: 604,
+    image: san,
+    tags: ["Sports", "Adventurous"]
+  },
+  {
+    title: "Anse Source d'Argent",
+    location: "La Digue, Seychelles",
+    price: 870,
+    image: anse,
+    tags: ["Beach", "Luxury"]
+  },
+  {
+    title: "Aysén Region",
+    location: "Patagonia, Chile",
+    price: 604,
+    image: aysen,
+    tags: ["Sports", "Adventurous"]
+  },
+  {
+    title: "Taman Negara",
+    location: "Peninsular Malaysia",
+    price: 300,
+    image: taman,
+    tags: ["Mountains", "Budget"]
+  },
+  {
+    title: "Zhangye Landform",
+    location: "Gansu, China",
+    price: 790,
+    image: zhangye,
+    tags: ["Solo travel", "City"]
+  },
+  {
+    title: "Roraima Tepui",
+    location: "Canaima Park, Venezuela",
+    price: 790,
+    image: roraima,
+    tags: ["Solo travel", "Budget"]
+  },
+  {
+    title: "Socotra Island",
+    location: "Yemen",
+    price: 870,
+    image: socotra,
+    tags: ["Luxury", "Beach"]
+  },
+  {
+    title: "San Lake Baikal",
+    location: "Siberia, Russia",
+    price: 604,
+    image: san,
+    tags: ["Sports", "Adventurous"]
+  }, {
+    title: "Thornridge Cir. Shiloh",
+    location: "St George’s Ln, Singapore",
+    price: 300,
+    image: thornridge,
+    tags: ["Mountains", "City"]
+  },
+  {
+    title: "Roraima Tepui",
+    location: "Canaima Park, Venezuela",
+    price: 790,
+    image: roraima,
+    tags: ["Solo travel", "Budget"]
+  },
+  {
+    title: "Socotra Island",
+    location: "Yemen",
+    price: 870,
+    image: socotra,
+    tags: ["Luxury", "Beach"]
+  },
+  {
+    title: "San Lake Baikal",
+    location: "Siberia, Russia",
+    price: 604,
+    image: san,
+    tags: ["Sports", "Adventurous"]
+  },{
+    title: "Taman Negara",
+    location: "Peninsular Malaysia",
+    price: 300,
+    image: taman,
+    tags: ["Mountains", "Budget"]
+  },
+  {
+    title: "Zhangye Landform",
+    location: "Gansu, China",
+    price: 790,
+    image: zhangye,
+    tags: ["Solo travel", "City"]
+  },
+  {
+    title: "Roraima Tepui",
+    location: "Canaima Park, Venezuela",
+    price: 790,
+    image: roraima,
+    tags: ["Solo travel", "Budget"]
+  },
+  {
+    title: "Socotra Island",
+    location: "Yemen",
+    price: 870,
+    image: socotra,
+    tags: ["Luxury", "Beach"]
+  },{
+    title: "Taman Negara",
+    location: "Peninsular Malaysia",
+    price: 300,
+    image: taman,
+    tags: ["Mountains", "Budget"]
   }
 ];
 

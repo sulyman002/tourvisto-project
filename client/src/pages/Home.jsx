@@ -10,7 +10,7 @@ const Home = () => {
   // const value = getData((data) => data.auth.setUser)
   // console.log(value)
   return (
-    <div>
+    <div className="bg-[#F9FBFC]">
       <div
         className="w-full h-screen bg-no-repeat bg-cover bg-right "
         style={{
