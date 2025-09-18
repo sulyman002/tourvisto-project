@@ -1,17 +1,31 @@
 import React, { useEffect } from "react";
 import authBg from "../assets/authBg.png";
-import  {jwtDecode}  from "jwt-decode";
-// import jwt_decode from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
 import tourvistoLogo from "../assets/tourvistoLogo.svg";
 import { toast } from "react-toastify";
+import { setUser } from "../redux/features/authSlice";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const AuthPage = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+
   useEffect(() => {
     const handleResponseData = (resp) => {
       try {
         const userData = jwtDecode(resp.credential);
-        console.log(`User data:`, userData);
-        toast.success(`signed into:`, userData.email);
+        console.log(`User data:`, userData.email);
+        dispatch(setUser(userData));
+        const check = userData.email.includes("@gmail.com");
+        if(check) {
+          navigate("/home")
+        }else {
+          toast.error("Only Gmail accounts are allowed")
+        }
+
+        toast.success(`signed into: ${userData?.email}`);
       } catch (error) {
         console.error("please try again");
         toast.error(error.message);
@@ -22,14 +36,17 @@ const AuthPage = () => {
     google.accounts.id.initialize({
       client_id:
         "285617373993-69o262siv3m4qth6dks593gn781br2ok.apps.googleusercontent.com",
-      callback: handleResponseData
+      callback: handleResponseData,
     });
 
-    google.accounts.id.renderButton(
-        document.getElementById("googleBtn"),
-        { theme: "outline", size: "large" }
-    )
-  }, []);
+    google.accounts.id.renderButton(document.getElementById("googleBtn"), {
+      theme: "outline",
+      size: "large",
+    });
+  }, [dispatch, navigate]);
+
+
+ 
 
   return (
     <div>
@@ -62,7 +79,7 @@ const AuthPage = () => {
 
               {/* <button
                 id="googleBtn"
-                onClick={() => google.accounts.id.prompt()}
+                
                 className=" text-[18px] cursor-pointer w-full rounded-[8px] font-semibold py-2 text-white bg-[#256FF1] "
               >
                 Sign in with Google
