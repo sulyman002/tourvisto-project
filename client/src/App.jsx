@@ -1,6 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import AuthPage from "./pages/authPage";
+// import AuthPage from "./pages/authPage";
+// import AuthPage from "./pages/AuthePage.jsx";
+import AuthePage from "./pages/AuthePage.jsx";
 import { ToastContainer } from "react-toastify";
 import { Provider } from "react-redux";
 import store from "./redux/store.js";
@@ -18,7 +20,7 @@ function App() {
     <>
       <Provider store={store}>
         <Routes>
-          <Route path="/" element={<AuthPage />} />
+          <Route path="/" element={<AuthePage />} />
           <Route path="home" element={<Home />} />
           <Route path="trip/:id" element={<TripDetails />} />
           <Route path="stripe/:id" element={<Stripe />} />

@@ -7,7 +7,7 @@ import { setUser } from "../redux/features/authSlice";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-const AuthPage = () => {
+const AuthePage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -93,4 +93,4 @@ const AuthPage = () => {
   );
 };
 
-export default AuthPage;
+export default AuthePage;
