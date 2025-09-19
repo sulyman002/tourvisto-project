@@ -3,6 +3,7 @@ import homeAssets from "../assets/allData.js";
 import Nav from "../component/Nav.jsx";
 import FeaturedTravel from "../component/FeaturedTravel.jsx";
 import HandPicked from "../component/HandPicked.jsx";
+import Footer from "../component/Footer.jsx";
 // import { useSelector } from "react-redux";
 
 const Home = () => {
@@ -33,6 +34,7 @@ const Home = () => {
       <div className="container mx-auto">
           <FeaturedTravel />
           <HandPicked />
+          <Footer />
 
         </div>
     </div>

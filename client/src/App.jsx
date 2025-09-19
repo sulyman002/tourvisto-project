@@ -5,6 +5,7 @@ import { ToastContainer } from "react-toastify";
 import { Provider } from "react-redux";
 import store from "./redux/store.js";
 import Home from "./pages/Home.jsx";
+import TripDetails from "./pages/TripDetails.jsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<AuthPage />} />
           <Route path="home" element={<Home />} />
+          <Route path="home/trip/:id" element={<TripDetails />} />
         </Routes>
         <ToastContainer />
       </Provider>
