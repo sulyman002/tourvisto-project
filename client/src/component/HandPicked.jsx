@@ -23,7 +23,12 @@ const HandPicked = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {destinations.slice((currentPage - 1) * 8, currentPage * 8).map((card, index) => (
-          <div onClick={() => navigate(`trip/${card.id}`)} className="cursor-pointer bg-white hover:bg-gray-400/10 rounded-[20px] shadow " key={index}>
+          <div onClick={() => 
+          {
+            navigate(`/trip/${card.id}`)
+            window.scroll(0,0)
+          }
+          } className="cursor-pointer bg-white hover:bg-gray-400/10 rounded-[20px] shadow " key={index}>
             <div className="w-full relative">
               <img
                 src={card?.image}
@@ -92,16 +97,16 @@ const HandPicked = () => {
       </div>
       {/* pagination */}
       <div className="w-full flex items-center justify-between text-[#2E2C48] mt-6">
-        <button onClick={() => setCurrentPage(Math.max(currentPage -1),1)} href="" className=" font-medium text-[14px] flex items-center gap-2 text-[#2E2C48] bg-white shadow rounded-md px-[14px] py-[8px] ">
+        <button onClick={() => setCurrentPage(Math.max(currentPage -1),1)}  className=" font-medium text-[14px] flex items-center gap-2 text-[#2E2C48] bg-white shadow rounded-md px-[14px] py-[8px] ">
             <img src={arrowLeft} alt="" />
             Previous
         </button>
         <div className="flex gap-3">
             {Array.from({length:Math.ceil(destinations.length/8)}).map((_,index) => (
-                <button onClick={() => setCurrentPage(index + 1)} href="" className={`cursor-pointer flex shadow flex-row items-center text-[14px] ${currentPage === index + 1 ? "bg-[#256FF1] text-white " : "text-[#2E2C48] bg-white " } font-medium justify-center gap-10 h-[40px] w-[40px] rounded-md`}>{index + 1}</button>
+                <button key={index} onClick={() => setCurrentPage(index + 1)} className={`cursor-pointer flex shadow flex-row items-center text-[14px] ${currentPage === index + 1 ? "bg-[#256FF1] text-white " : "text-[#2E2C48] bg-white " } font-medium justify-center gap-10 h-[40px] w-[40px] rounded-md`}>{index + 1}</button>
             ))}
         </div>
-        <button onClick={() => setCurrentPage(Math.min(currentPage + 1),1)}  href="" className="font-medium text-[14px] flex items-center gap-2 shadow rounded-md px-[14px] py-[8px]">
+        <button onClick={() => setCurrentPage(Math.min(currentPage + 1),1)}  className="font-medium text-[14px] flex items-center gap-2 shadow rounded-md px-[14px] py-[8px]">
             <img src={arrowRight} alt="" />
             Previous
         </button>

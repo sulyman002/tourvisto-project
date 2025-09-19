@@ -4,12 +4,10 @@ import Nav from "../component/Nav.jsx";
 import FeaturedTravel from "../component/FeaturedTravel.jsx";
 import HandPicked from "../component/HandPicked.jsx";
 import Footer from "../component/Footer.jsx";
-// import { useSelector } from "react-redux";
+
 
 const Home = () => {
-  // const getData = useSelector();
-  // const value = getData((data) => data.auth.setUser)
-  // console.log(value)
+
   return (
     <div className="bg-[#F9FBFC]">
       <div

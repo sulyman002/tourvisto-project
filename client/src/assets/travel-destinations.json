@@ -1,0 +1,47 @@
+
+
+
+[
+  {
+    "title": "Barcelona Tour",
+    "location": "Barcelona, Spain",
+    "rating": 3.5,
+    "activities": 196,
+    "image": "barcelona.jpg"
+  },
+  {
+    "title": "Australia Tour",
+    "location": "Australia",
+    "rating": 3.5,
+    "activities": 196,
+    "image": "australia1.jpg"
+  },
+  {
+    "title": "London Tour",
+    "location": "London, United Kingdom",
+    "rating": 3.5,
+    "activities": 196,
+    "image": "london.jpg"
+  },
+  {
+    "title": "Australia Tour",
+    "location": "Australia",
+    "rating": 3.5,
+    "activities": 196,
+    "image": "australia2.jpg"
+  },
+  {
+    "title": "Japan Tour",
+    "location": "Japan",
+    "rating": 3.5,
+    "activities": 196,
+    "image": "japan1.jpg"
+  },
+  {
+    "title": "Japan Tour",
+    "location": "Japan",
+    "rating": 3.5,
+    "activities": 196,
+    "image": "japan2.jpg"
+  }
+]

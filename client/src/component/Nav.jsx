@@ -30,7 +30,10 @@ const Nav = () => {
         </p>
       </div>
       <div className="flex items-center gap-4">
-        <p className=" text-[18px] leading-[24px] text-white ">Admin Panel</p>
+        <p onClick={() => {
+          navigate("/admin")
+          window.scrollTo({top: 0, behavior: "smooth"})
+        }} className=" text-[18px] leading-[24px] text-white cursor-pointer hover:text-gray-200 ">Admin Panel</p>
         <div className="h-[40px] w-[40px] rounded-full flex items-center justify-center ">
           <img
             src={getProfilePicture || homeAssets.logout}
@@ -38,8 +41,9 @@ const Nav = () => {
             className="w-[34px] rounded-full"
           />
         </div>
+       
         <div
-          onClick={handleLogout}
+          onClick={() => handleLogout()}
           className="cursor-pointer h-[40px] w-[40px] bg-white/30 rounded-full flex items-center justify-center "
         >
           <img src={homeAssets.logout} alt="logout" className="w-[24px]" />

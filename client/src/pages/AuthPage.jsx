@@ -26,6 +26,7 @@ const AuthPage = () => {
         }
 
         toast.success(`signed into: ${userData?.email}`);
+        console.log(userData);
       } catch (error) {
         console.error("please try again");
         toast.error(error.message);
