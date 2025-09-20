@@ -18,7 +18,7 @@ const Home = () => {
       >
         <div className="container mx-auto">
           <Nav />
-          <div className=" px-6 mt-60 md:w-[450px] lg:w-[540px] gap-4 flex flex-col ">
+          <div className=" px-6 mt-50 md:w-[450px] lg:w-[540px] gap-4 flex flex-col ">
             <h1 className="font-700 font-bold md:text-[72px] text-[60px] md:leading-[110px] leading-[80px] text-[#1F1F36]">
               Plan Your <br /> Trip with Ease
             </h1>

@@ -33,7 +33,8 @@ const AdminDashboard = () => {
   return (
     <div className="bg-[#F9FBFC] flex flex-col md:flex-row h-screen w-full">
       {/* common in admin */}
-      <div className="w-1/5 bg-[#F9FBFC] shadow-lg h-screen px-8 py-10 hidden md:flex ">
+      {/* w-1/5 this was the initial value in-case */}
+      <div className="w-[350px] bg-[#F9FBFC] shadow-lg h-screen px-8 py-10 hidden md:flex ">
         <div className="flex flex-col justify-between h-full">
           <div className="flex flex-col">
             <div className="flex items-center gap-3 ">

@@ -29,7 +29,7 @@ const Nav = () => {
           Tourvisto
         </p>
       </div>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-3">
         <p onClick={() => {
           navigate("/admin/dashboard")
           window.scrollTo({top: 0, behavior: "smooth"})
