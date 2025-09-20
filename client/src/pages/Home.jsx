@@ -5,36 +5,41 @@ import FeaturedTravel from "../component/FeaturedTravel.jsx";
 import HandPicked from "../component/HandPicked.jsx";
 import Footer from "../component/Footer.jsx";
 
-
 const Home = () => {
-
   return (
     <div className="bg-[#F9FBFC]">
       <div
-        className="w-full h-screen bg-no-repeat bg-cover bg-right "
+        className="w-full lg:h-screen bg-no-repeat bg-cover bg-right py-4 "
         style={{
           backgroundImage: `linear-gradient(to right, #CFF1FFCC, #FFFFFF00), url(${homeAssets.hero_img})`,
         }}
       >
         <div className="container mx-auto">
           <Nav />
-          <div className=" px-6 mt-50 md:w-[450px] lg:w-[540px] gap-4 flex flex-col ">
-            <h1 className="font-700 font-bold md:text-[72px] text-[60px] md:leading-[110px] leading-[80px] text-[#1F1F36]">
+          <div className=" px-6 my-40  md:w-[600px] lg:w-[540px] gap-4 flex flex-col ">
+            <h1 className="font-700 font-bold md:text-[65px] lg:text-[72] text-[60px] md:leading-[110px]  text-[#1F1F36]">
               Plan Your <br /> Trip with Ease
             </h1>
-            <p className="text-[18px] leading-[30px] text-[#2E2C48] ">Customize your travel itinerary in minutes—pick your destination, set your preferences, and explore with confidence.</p>
-              <div><a  href="#handPicked" className="bg-[#256FF1] px-10 py-3 text-white font-semibold text-[18px] leading-[24px] rounded-md ">Get Started</a></div>
+            <p className="text-[18px] leading-[30px] text-[#2E2C48] ">
+              Customize your travel itinerary in minutes—pick your destination,
+              set your preferences, and explore with confidence.
+            </p>
+            <div>
+              <a
+                href="#handPicked"
+                className="bg-[#256FF1] px-10 py-3 text-white font-semibold text-[18px] leading-[24px] rounded-md "
+              >
+                Get Started
+              </a>
+            </div>
           </div>
         </div>
-        
-        
       </div>
       <div className="container mx-auto">
-          <FeaturedTravel />
-          <HandPicked />
-          <Footer />
-
-        </div>
+        <FeaturedTravel />
+        <HandPicked />
+        <Footer />
+      </div>
     </div>
   );
 };
