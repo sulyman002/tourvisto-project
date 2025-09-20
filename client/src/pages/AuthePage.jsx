@@ -12,7 +12,6 @@ const AuthePage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-
   useEffect(() => {
     const handleResponseData = (resp) => {
       try {
@@ -20,10 +19,10 @@ const AuthePage = () => {
         console.log(`User data:`, userData.email);
         dispatch(setUser(userData));
         const check = userData.email.includes("@gmail.com");
-        if(check) {
-          navigate("/home")
-        }else {
-          toast.error("Only Gmail accounts are allowed")
+        if (check) {
+          navigate("/home");
+        } else {
+          toast.error("Only Gmail accounts are allowed");
         }
 
         toast.success(`signed into: ${userData?.email}`);
@@ -47,9 +46,6 @@ const AuthePage = () => {
     });
   }, [dispatch, navigate]);
 
-
- 
-
   return (
     <div>
       <div
@@ -61,7 +57,10 @@ const AuthePage = () => {
       >
         <div className="flex items-center justify-center w-[495px] px-4">
           <div className="bg-white rounded-[20px] py-6 px-8 flex flex-col gap-6 ">
-            <div className="flex items-center justify-center gap-2">
+            <div
+              onClick={navigate("/home")}
+              className="flex items-center justify-center gap-2"
+            >
               <img src={tourvistoLogo} alt="tourvisto logo" />
               <h2 className="text-[#1F1F36] font-bold font-700 leading-[28px] text-[28px] ">
                 Tourvisto

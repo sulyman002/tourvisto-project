@@ -178,7 +178,12 @@ const CreateTrips = () => {
             </div>
           </div>
           {/* button */}
-          <div onClick={() => navigate("/admin/create-trip/ai-trips")} className="flex items-center cursor-pointer justify-center w-full bg-[#256FF1] h-[44px] gap-3 rounded-[8px] text-white ">
+          <div onClick={() => {
+            navigate("/admin/create-trip/ai-trips");
+            window.scrollTo({top:0, behavior: "smooth"})
+          }
+
+          } className="flex items-center cursor-pointer justify-center w-full bg-[#256FF1] h-[44px] gap-3 rounded-[8px] text-white ">
             <img src={generate} alt="plus" />
             Generate a trip
           </div>

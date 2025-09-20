@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { setUser } from "../redux/features/authSlice";
 import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
 
 const Nav = () => {
   const user = useSelector((state) => state.authRed.user);
@@ -25,15 +26,23 @@ const Nav = () => {
     <div className="py-8 flex items-center justify-between px-6">
       <div className="flex items-center gap-3">
         <img src={homeAssets.tourvistoLogo} alt="tourvisto logo" />
-        <p className=" text-[#1F1F36] font-700 font-bold leading-[24px] text-[24px] text-[Plus Jakarta Sans] ">
+        <p
+          
+          className=" text-[#1F1F36] font-700 font-bold leading-[24px] text-[24px] text-[Plus Jakarta Sans] "
+        >
           Tourvisto
         </p>
       </div>
       <div className="flex items-center gap-3">
-        <p onClick={() => {
-          navigate("/admin/dashboard")
-          window.scrollTo({top: 0, behavior: "smooth"})
-        }} className=" text-[18px] leading-[24px] text-[#292D32] cursor-pointer hover:text-gray-200 ">Admin Panel</p>
+        <p
+          onClick={() => {
+            navigate("/admin/dashboard");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          className=" text-[18px] leading-[24px] text-[#292D32] cursor-pointer hover:text-gray-200 "
+        >
+          Admin Panel
+        </p>
         <div className="h-[40px] w-[40px] rounded-full flex items-center justify-center ">
           <img
             src={getProfilePicture || homeAssets.logout}
@@ -41,9 +50,12 @@ const Nav = () => {
             className="w-[34px] rounded-full"
           />
         </div>
-       
+
         <div
-          onClick={() => handleLogout()}
+          onClick={() => {
+            handleLogout();
+            toast.error("You've been logged out successfully");
+          }}
           className="cursor-pointer h-[40px] w-[40px] bg-white/30 rounded-full flex items-center justify-center "
         >
           <img src={homeAssets.logout} alt="logout" className="w-[24px]" />

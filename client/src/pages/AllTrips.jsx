@@ -110,7 +110,7 @@ const AllTrips = () => {
         <button
           onClick={() => {
             setCurrentPage(Math.max(currentPage - 1), 1);
-            window.scrollTo({ top: 3600, behavior: "smooth" });
+            window.scrollTo({ top: 0, behavior: "smooth" });
           }}
           className=" font-medium text-[14px] flex items-center gap-2 text-[#2E2C48] bg-white shadow rounded-md px-[14px] py-[8px] "
         >
@@ -124,7 +124,7 @@ const AllTrips = () => {
                 key={index}
                 onClick={() => {
                   setCurrentPage(index + 1);
-                  window.scrollTo({ top: 3600 });
+                  window.scrollTo({ top: 0 });
                 }}
                 className={`cursor-pointer flex shadow flex-row items-center text-[14px] ${
                   currentPage === index + 1
@@ -140,7 +140,7 @@ const AllTrips = () => {
         <button
           onClick={() => {
             setCurrentPage(Math.min(currentPage + 1), 1);
-            window.scrollTo({ top: 3600, behavior: "smooth" });
+            window.scrollTo({ top: 0, behavior: "smooth" });
           }}
           className="font-medium text-[14px] flex items-center gap-2 shadow rounded-md px-[14px] py-[8px]"
         >

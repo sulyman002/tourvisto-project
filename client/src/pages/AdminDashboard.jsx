@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { setUser } from "../redux/features/authSlice";
 import { useDispatch } from "react-redux";
 import hamburger from "../assets/hamburger.svg";
+import { toast } from "sonner";
 
 const AdminDashboard = () => {
   const dispatch = useDispatch();
@@ -37,7 +38,10 @@ const AdminDashboard = () => {
       <div className="w-[350px] bg-[#F9FBFC] shadow-lg h-screen px-8 py-10 hidden md:flex ">
         <div className="flex flex-col justify-between h-full">
           <div className="flex flex-col">
-            <div className="flex items-center gap-3 ">
+            <div
+              
+              className="flex items-center gap-3 "
+            >
               <img src={homeAssets.tourvistoLogo} alt="tourvisto logo" />
               <p className=" text-[#1F1F36] font-700 font-bold leading-[24px] text-[24px] text-[Plus Jakarta Sans] ">
                 Tourvisto
@@ -385,21 +389,26 @@ const AdminDashboard = () => {
           </div>
           {/* Profile */}
           <div className="flex items-center gap-2 mb-20">
-            <div className="rounded-full">
+            <div className="rounded-full min-w-0">
               <img
                 src={grabData?.picture}
                 alt="profile picture"
-                className="w-[34px] rounded-full"
+                className="w-[34px] h-[34px] rounded-full object-cover flex-shrink-0"
               />
             </div>
             <div className="flex flex-col">
               <p className="font-600 font-semibold text-[16px] text-[#141627] ">
                 {grabData?.name}
               </p>
-              <p className="text-[#7F7E83] text-[14px]  ">{grabData?.email}</p>
+              <p className="text-[#7F7E83] text-[14px] w-[100px] overflow-x-auto  ">
+                {grabData?.email}
+              </p>
             </div>
             <div
-              onClick={() => handleLogout()}
+              onClick={() => {
+                handleLogout();
+                toast.error("You've been logged out successfully");
+              }}
               className="cursor-pointer h-[40px] w-[40px]  rounded-full flex items-center justify-center "
             >
               <img src={homeAssets.logout} alt="logout" className="w-[24px]" />
