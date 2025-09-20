@@ -31,7 +31,7 @@ const Nav = () => {
       </div>
       <div className="flex items-center gap-4">
         <p onClick={() => {
-          navigate("/admin")
+          navigate("/admin/dashboard")
           window.scrollTo({top: 0, behavior: "smooth"})
         }} className=" text-[18px] leading-[24px] text-[#292D32] cursor-pointer hover:text-gray-200 ">Admin Panel</p>
         <div className="h-[40px] w-[40px] rounded-full flex items-center justify-center ">

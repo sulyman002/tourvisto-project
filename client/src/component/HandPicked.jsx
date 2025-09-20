@@ -22,6 +22,7 @@ const HandPicked = () => {
           interests
         </p>
       </div>
+      {/* destination */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {destinations.slice((currentPage - 1) * 8, currentPage * 8).map((card, index) => (
           <div onClick={() => 

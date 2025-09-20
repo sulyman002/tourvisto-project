@@ -33,7 +33,7 @@ const AdminDashboard = () => {
   return (
     <div className="bg-[#F9FBFC] flex flex-col md:flex-row h-screen w-full">
       {/* common in admin */}
-      <div className="w-1/5 bg-gray-300 h-screen px-8 py-10 hidden md:flex ">
+      <div className="w-1/5 bg-[#F9FBFC] shadow-lg h-screen px-8 py-10 hidden md:flex ">
         <div className="flex flex-col justify-between h-full">
           <div className="flex flex-col">
             <div className="flex items-center gap-3 ">
@@ -142,7 +142,7 @@ const AdminDashboard = () => {
                 onClick={(event) => {
                   setChangeAdmin(event.target.name);
                   console.log(event.target);
-                  navigate("ai-trips");
+                  navigate("create-trip");
                 }}
                 className={`flex items-center gap-3 cursor-pointer justify-start pl-10 py-4 rounded-[10px] font-600 font-semibold text-[18px] leading-[24px] ${
                   changeAdmin === "aitrip"
@@ -383,7 +383,7 @@ const AdminDashboard = () => {
             </button>
           </div>
           {/* Profile */}
-          <div className="flex items-center gap-2 mb-10">
+          <div className="flex items-center gap-2 mb-20">
             <div className="rounded-full">
               <img
                 src={grabData?.picture}
