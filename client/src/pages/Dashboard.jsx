@@ -14,8 +14,8 @@ const Dashboard = () => {
   console.log(grabData?.name);
   return (
     <div className="md:p-14 p-6 w-full">
-      <div className="flex items-start justify-between">
-        <div className="flex flex-col">
+      <div className="flex items-start flex-col md:flex-row md:justify-between gap-3">
+        <div className="flex flex-col gap-3">
           <h2 className="text-[#1F1F36] font-600 font-semibold text-[24px] ">
             {grabData?.name} 👋
           </h2>
@@ -23,7 +23,7 @@ const Dashboard = () => {
             Track activity, trends, and popular destinations in real time
           </p>
         </div>
-        <div className="flex items-center justify-center bg-[#256FF1] w-[233px] h-[44px] gap-3 rounded-[8px] text-white ">
+        <div className="flex items-center justify-center w-full bg-[#256FF1] md:w-[233px] h-[44px] gap-3 rounded-[8px] text-white ">
           <img src={plus} alt="plus" />
           Create trip
         </div>
@@ -200,92 +200,92 @@ const Dashboard = () => {
       {/* chart */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* first */}
-        <div className="bg-white shadow-md rounded-[20px] p-6 ">
+        <div className="bg-white shadow-md rounded-[20px] p-6 space-y-6 ">
           <h3 className="text-[#1F1F36] font-600 font-semibold text-[20px] ">
             Latest user sign ups
           </h3>
 
           <table className="w-full border-collapse">
             <thead>
-              <tr className="bg-gray-100 uppercase text-[#7F7E83">
-                <th className="w-2/3 px-4 py-3 text-[12px] text-left">Name</th>
-                <th className="w-1/3 px-4 py-3 text-[12px] text-right">Itinerary Created</th>
+              <tr className="bg-[#F9FBFC] uppercase text-[#7F7E83">
+                <th className="w-2/3 px-4 py-4 text-[12px] text-left">Name</th>
+                <th className="w-1/3 px-4 py-4 text-[12px] text-right">Itinerary Created</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td  className="w-2/3 flex items-center gap-4 px-4 py-3 text-[14px] text-left text-[#1F1F36] font-600 font-semibold ">
+                <td  className="w-2/3 flex items-center gap-4 px-4 py-4 text-[14px] text-left text-[#1F1F36] font-600 font-semibold ">
                 <img src={grabData?.picture} alt="" className="w-[40px] rounded-full"/>
                 <p className="capitalize ">{grabData?.name}</p>
                 </td>
-                <td  className="w-2/3 px-4 py-3 text-[14px] text-left text-[#1F1F36] font-600 font-semibold">12</td>
+                <td  className="w-2/3 px-4 py-4 text-[14px] text-left text-[#1F1F36] font-600 font-semibold">12</td>
               </tr>
               <tr>
-                <td  className="w-2/3 flex items-center gap-4 px-4 py-3 text-[14px] text-left text-[#1F1F36] font-600 font-semibold ">
+                <td  className="w-2/3 flex items-center gap-4 px-4 py-4 text-[14px] text-left text-[#1F1F36] font-600 font-semibold ">
                 <img src={grabData?.picture} alt="" className="w-[40px] rounded-full"/>
                 <p className="capitalize ">{grabData?.name}</p>
                 </td>
-                <td  className="w-2/3 px-4 py-3 text-[14px] text-left text-[#1F1F36] font-600 font-semibold">12</td>
+                <td  className="w-2/3 px-4 py-4 text-[14px] text-left text-[#1F1F36] font-600 font-semibold">12</td>
               </tr>
               <tr>
-                <td  className="w-2/3 flex items-center gap-4 px-4 py-3 text-[14px] text-left text-[#1F1F36] font-600 font-semibold ">
+                <td  className="w-2/3 flex items-center gap-4 px-4 py-4 text-[14px] text-left text-[#1F1F36] font-600 font-semibold ">
                 <img src={grabData?.picture} alt="" className="w-[40px] rounded-full"/>
                 <p className="capitalize ">{grabData?.name}</p>
                 </td>
-                <td  className="w-2/3 px-4 py-3 text-[14px] text-left text-[#1F1F36] font-600 font-semibold">12</td>
+                <td  className="w-2/3 px-4 py-4 text-[14px] text-left text-[#1F1F36] font-600 font-semibold">12</td>
               </tr>
               <tr>
-                <td  className="w-2/3 flex items-center gap-4 px-4 py-3 text-[14px] text-left text-[#1F1F36] font-600 font-semibold ">
+                <td  className="w-2/3 flex items-center gap-4 px-4 py-4 text-[14px] text-left text-[#1F1F36] font-600 font-semibold ">
                 <img src={grabData?.picture} alt="" className="w-[40px] rounded-full"/>
                 <p className="capitalize ">{grabData?.name}</p>
                 </td>
-                <td  className="w-2/3 px-4 py-3 text-[14px] text-left text-[#1F1F36] font-600 font-semibold">12</td>
+                <td  className="w-2/3 px-4 py-4 text-[14px] text-left text-[#1F1F36] font-600 font-semibold">12</td>
               </tr>
               
             </tbody>
           </table>
         </div>
         {/* second */}
-        <div className="bg-white shadow-md rounded-[20px] p-6 ">
+        <div className="bg-white shadow-md rounded-[20px] p-6 space-y-6 ">
           <h3 className="text-[#1F1F36] font-600 font-semibold text-[20px] ">
-            Latest user sign ups
+            Latest trip bookings
           </h3>
 
           <table className="w-full border-collapse">
             <thead>
-              <tr className="bg-gray-100 uppercase text-[#7F7E83">
-                <th className="w-2/3 px-4 py-3 text-[12px] text-left">Name</th>
-                <th className="w-1/3 px-4 py-3 text-[12px] text-right">Itinerary Created</th>
+              <tr className="bg-[#F9FBFC] uppercase text-[#7F7E83">
+                <th className="w-2/3 px-4 py-4 text-[12px] text-left">Booking</th>
+                <th className="w-1/3 px-4 py-4 text-[12px] text-left">Travel Dates</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td  className="w-2/3 flex items-center gap-4 px-4 py-3 text-[14px] text-left text-[#1F1F36] font-600 font-semibold ">
+                <td  className="w-2/3 flex items-center gap-4 px-4 py-4 text-[14px] text-left text-[#1F1F36] font-600 font-semibold ">
                 <img src={grabData?.picture} alt="" className="w-[40px] rounded-full"/>
                 <p className="capitalize ">{grabData?.name}</p>
                 </td>
-                <td  className="w-2/3 px-4 py-3 text-[14px] text-left text-[#1F1F36] font-600 font-semibold">12</td>
+                <td  className="w-2/3 px-4 py-4 text-[14px] text-left text-[#1F1F36] font-600 font-semibold">Jun 02 - Jun 12</td>
               </tr>
               <tr>
-                <td  className="w-2/3 flex items-center gap-4 px-4 py-3 text-[14px] text-left text-[#1F1F36] font-600 font-semibold ">
+                <td  className="w-2/3 flex items-center gap-4 px-4 py-4 text-[14px] text-left text-[#1F1F36] font-600 font-semibold ">
                 <img src={grabData?.picture} alt="" className="w-[40px] rounded-full"/>
                 <p className="capitalize ">{grabData?.name}</p>
                 </td>
-                <td  className="w-2/3 px-4 py-3 text-[14px] text-left text-[#1F1F36] font-600 font-semibold">12</td>
+                <td  className="w-2/3 px-4 py-4 text-[14px] text-left text-[#1F1F36] font-600 font-semibold">Jun 07 - Jun 09</td>
               </tr>
               <tr>
-                <td  className="w-2/3 flex items-center gap-4 px-4 py-3 text-[14px] text-left text-[#1F1F36] font-600 font-semibold ">
+                <td  className="w-2/3 flex items-center gap-4 px-4 py-4 text-[14px] text-left text-[#1F1F36] font-600 font-semibold ">
                 <img src={grabData?.picture} alt="" className="w-[40px] rounded-full"/>
                 <p className="capitalize ">{grabData?.name}</p>
                 </td>
-                <td  className="w-2/3 px-4 py-3 text-[14px] text-left text-[#1F1F36] font-600 font-semibold">12</td>
+                <td  className="w-2/3 px-4 py-4 text-[14px] text-left text-[#1F1F36] font-600 font-semibold">Jun 10 - Jun 23</td>
               </tr>
               <tr>
-                <td  className="w-2/3 flex items-center gap-4 px-4 py-3 text-[14px] text-left text-[#1F1F36] font-600 font-semibold ">
+                <td  className="w-2/3 flex items-center gap-4 px-4 py-4 text-[14px] text-left text-[#1F1F36] font-600 font-semibold ">
                 <img src={grabData?.picture} alt="" className="w-[40px] rounded-full"/>
                 <p className="capitalize ">{grabData?.name}</p>
                 </td>
-                <td  className="w-2/3 px-4 py-3 text-[14px] text-left text-[#1F1F36] font-600 font-semibold">12</td>
+                <td  className="w-2/3 px-4 py-4 text-[14px] text-left text-[#1F1F36] font-600 font-semibold">Jun 12 - Jun 26</td>
               </tr>
               
             </tbody>
