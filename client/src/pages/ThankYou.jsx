@@ -17,14 +17,14 @@ const ThankYou = () => {
         className="h-screen bg-cover flex flex-col items-center justify-center gap-4 "
         style={{ backgroundImage: `url(${thankyouBg})` }}
       >
-        <div className="w-[448px] flex flex-col items-center ">
+        <div className="md:w-[448px] flex flex-col items-center px-6 ">
           <img
             src={check}
             alt="success check"
             className="w-[100px] h-[100px] "
           />
         
-        <h2 className="font-600 font-semibold text-[30px] text-[#1F1F36] ">
+        <h2 className="font-600 font-semibold text-center text-[30px] text-[#1F1F36] pt-4 ">
           Thank You & Welcome Aboard!
         </h2>
         <p className="text-[18px] leading-[30px] text-center py-2 ">

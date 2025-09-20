@@ -28,7 +28,7 @@ const TripDetails = () => {
       <div className="flex flex-col md:flex-row gap-14 items-start px-6">
         {/* button */}
         <button
-        onClick={() => navigate(`/trip/${id}`)}
+        onClick={() => navigate("/home")}
           href=""
           className=" cursor-pointer font-medium text-[14px] flex items-center justify-center gap-2 text-[#2E2C48] bg-white shadow-lg rounded-md h-[50px] w-[147px] "
         >
@@ -41,7 +41,7 @@ const TripDetails = () => {
             <h1 className="text-[#1F1F36] font-semibold font-600 text-[40px] leading-[44px] ">
               5-Day Japan Highlights: Culture, Food <br /> and Adventure
             </h1>
-            <div className="flex items-center gap-8">
+            <div className="flex md:items-center md:flex-row flex-col items-start gap-8">
               <div className="flex items-center gap-3">
                 <img src={calender} alt="calender" />
                 <span className="text-[#7F7E83] text-[18px]">5 day plan</span>
@@ -250,7 +250,10 @@ const TripDetails = () => {
                 />
               </div>
               <button
-                onClick={() => navigate(`/stripe/${singleData.id}`)}
+                onClick={() => {
+                  navigate(`/stripe/${singleData.id}`)
+                  window.scrollTo({top: 0, behavior: "smooth"});
+                }}
                 className="cursor-pointer bg-[#256FF1] text-[16px] font-semibold font-600 flex rounded-[8px] items-center gap-3 justify-center py-[14px] text-white "
               >
                 Pay and join trip{" "}

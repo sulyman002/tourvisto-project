@@ -6,12 +6,14 @@ import arrowUp from "../assets/arrow-up.svg";
 import line1 from "../assets/line1.png";
 import { destinations } from "../assets/allData";
 import location from "../assets/handPicked-trip/location.svg";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   const grabData = useSelector((state) => state.authRed.user);
+  const navigate = useNavigate();
   console.log(grabData?.name);
   return (
-    <div className="p-14">
+    <div className="md:p-14 p-6 w-full">
       <div className="flex items-start justify-between">
         <div className="flex flex-col">
           <h2 className="text-[#1F1F36] font-600 font-semibold text-[24px] ">

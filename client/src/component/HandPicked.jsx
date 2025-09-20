@@ -4,6 +4,7 @@ import location from "../assets/handPicked-trip/location.svg";
 import arrowRight from "../assets/arrow-right.svg"
 import arrowLeft from "../assets/arrow-left.svg"
 import { useNavigate } from "react-router-dom";
+
  
 const HandPicked = () => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -13,7 +14,7 @@ const HandPicked = () => {
   return (
     <div className="px-6 py-20 flex flex-col gap-4">
       <div className="flex flex-col space-y-3">
-        <h1 className="text-[36px] font-bold leading-[44px] text-[#1F1F36] ">
+        <h1 id="handPicked" className="text-[36px] font-bold leading-[44px] text-[#1F1F36] ">
           Handpicked Trips
         </h1>
         <p className="text-[18px] leading-[32px] text-[#7F7E83]  ">
@@ -96,17 +97,27 @@ const HandPicked = () => {
         ))}
       </div>
       {/* pagination */}
-      <div className="w-full flex items-center justify-between text-[#2E2C48] mt-6">
-        <button onClick={() => setCurrentPage(Math.max(currentPage -1),1)}  className=" font-medium text-[14px] flex items-center gap-2 text-[#2E2C48] bg-white shadow rounded-md px-[14px] py-[8px] ">
+      <div className="w-full flex items-center flex-col md:flex-row justify-between  text-[#2E2C48] mt-6 gap-4">
+        <button onClick={() => {
+          setCurrentPage(Math.max(currentPage -1),1)
+          window.scrollTo({top: 3600, behavior: "smooth"})
+          }}  className=" font-medium text-[14px] flex items-center gap-2 text-[#2E2C48] bg-white shadow rounded-md px-[14px] py-[8px] ">
             <img src={arrowLeft} alt="" />
             Previous
         </button>
         <div className="flex gap-3">
             {Array.from({length:Math.ceil(destinations.length/8)}).map((_,index) => (
-                <button key={index} onClick={() => setCurrentPage(index + 1)} className={`cursor-pointer flex shadow flex-row items-center text-[14px] ${currentPage === index + 1 ? "bg-[#256FF1] text-white " : "text-[#2E2C48] bg-white " } font-medium justify-center gap-10 h-[40px] w-[40px] rounded-md`}>{index + 1}</button>
+                <button key={index} onClick={() => {
+                  setCurrentPage(index + 1);
+                  window.scrollTo({top: 3600})
+                }} className={`cursor-pointer flex shadow flex-row items-center text-[14px] ${currentPage === index + 1 ? "bg-[#256FF1] text-white " : "text-[#2E2C48] bg-white " } font-medium justify-center gap-10 h-[40px] w-[40px] rounded-md`}>{index + 1}</button>
             ))}
         </div>
-        <button onClick={() => setCurrentPage(Math.min(currentPage + 1),1)}  className="font-medium text-[14px] flex items-center gap-2 shadow rounded-md px-[14px] py-[8px]">
+        <button  onClick={() => {
+          setCurrentPage(Math.min(currentPage + 1),1)
+          window.scrollTo({top: 3600, behavior: "smooth"})
+
+        }}  className="font-medium text-[14px] flex items-center gap-2 shadow rounded-md px-[14px] py-[8px]">
             <img src={arrowRight} alt="" />
             Previous
         </button>

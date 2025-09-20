@@ -23,7 +23,7 @@ const Home = () => {
               Plan Your <br /> Trip with Ease
             </h1>
             <p className="text-[18px] leading-[30px] text-[#2E2C48] ">Customize your travel itinerary in minutes—pick your destination, set your preferences, and explore with confidence.</p>
-              <div><button className="bg-[#256FF1] px-10 py-3 text-white font-semibold text-[18px] leading-[24px] rounded-md ">Get Started</button></div>
+              <div><a  href="#handPicked" className="bg-[#256FF1] px-10 py-3 text-white font-semibold text-[18px] leading-[24px] rounded-md ">Get Started</a></div>
           </div>
         </div>
         

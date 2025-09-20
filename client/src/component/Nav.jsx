@@ -33,7 +33,7 @@ const Nav = () => {
         <p onClick={() => {
           navigate("/admin")
           window.scrollTo({top: 0, behavior: "smooth"})
-        }} className=" text-[18px] leading-[24px] text-white cursor-pointer hover:text-gray-200 ">Admin Panel</p>
+        }} className=" text-[18px] leading-[24px] text-[#292D32] cursor-pointer hover:text-gray-200 hidden sm:flex ">Admin Panel</p>
         <div className="h-[40px] w-[40px] rounded-full flex items-center justify-center ">
           <img
             src={getProfilePicture || homeAssets.logout}
