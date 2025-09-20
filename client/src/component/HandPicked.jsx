@@ -116,7 +116,7 @@ const HandPicked = () => {
         </div>
         <button  onClick={() => {
           setCurrentPage(Math.min(currentPage + 1),1)
-          window.scrollTo({top: 3600, behavior: "smooth"})
+          window.scrollTo({top: 3500, behavior: "smooth"})
 
         }}  className="font-medium text-[14px] flex items-center gap-2 shadow rounded-md px-[14px] py-[8px]">
             <img src={arrowRight} alt="" />

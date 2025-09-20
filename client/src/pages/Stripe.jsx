@@ -23,14 +23,13 @@ const Stripe = () => {
 
   return (
     <div className="bg-[#F9FBFC]">
-      <div className="mx-auto container grid grid-cols-1 md:grid-cols-2 px-6  h-screen">
+      <div className="mx-auto container grid grid-cols-1 md:grid-cols-2 px-6 gap-8 h-screen">
         <div className=" flex flex-col justify-between gap-10 py-20 ">
           <div className="flex flex-col">
             <div>
               <div className="flex items-center gap-3">
                 <img src={arrow_left} alt="" />
                 <div
-                  onClick={navigate("/home")}
                   className="flex items-center gap-3 "
                 >
                   <img src={homeAssets.tourvistoLogo} alt="tourvisto logo" />
@@ -81,7 +80,7 @@ const Stripe = () => {
         </div>
 
         {/* second content here */}
-        <div className="w-full bg-white shadow-md py-20 px-6 md:px-20 flex flex-col">
+        <div className="w-full bg-white shadow-md py-20 px-6 lg:px-20 flex flex-col">
           <button className="flex items-center justify-center h-[42px] bg-black rounded-[4px]">
             <img src={applePay} alt="apple pay" />
           </button>

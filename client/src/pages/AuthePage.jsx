@@ -58,7 +58,6 @@ const AuthePage = () => {
         <div className="flex items-center justify-center w-[495px] px-4">
           <div className="bg-white rounded-[20px] py-6 px-8 flex flex-col gap-6 ">
             <div
-              onClick={navigate("/home")}
               className="flex items-center justify-center gap-2"
             >
               <img src={tourvistoLogo} alt="tourvisto logo" />
