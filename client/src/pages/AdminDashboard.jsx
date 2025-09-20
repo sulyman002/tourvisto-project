@@ -139,14 +139,14 @@ const AdminDashboard = () => {
                 All Users
               </button>
               <button
-                name="aitrip"
+                name="create-trip"
                 onClick={(event) => {
                   setChangeAdmin(event.target.name);
                   console.log(event.target);
                   navigate("create-trip");
                 }}
                 className={`flex items-center gap-3 cursor-pointer justify-start pl-10 py-4 rounded-[10px] font-600 font-semibold text-[18px] leading-[24px] ${
-                  changeAdmin === "aitrip"
+                  changeAdmin === "create-trip"
                     ? "bg-[#256FF1]  text-white "
                     : "text-[#7F7E83] "
                 }`}
@@ -340,7 +340,7 @@ const AdminDashboard = () => {
               onClick={(event) => {
                 setChangeAdmin(event.target.name);
                 console.log(event.target);
-                navigate("ai-trips");
+                navigate("create-trip");
                 setOpenNav(false);
               }}
               className={`flex items-center gap-3 cursor-pointer justify-start pl-10 py-4 rounded-[10px] font-600 font-semibold text-[18px] leading-[24px] ${
